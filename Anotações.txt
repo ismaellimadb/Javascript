@@ -1,4 +1,4 @@
-window.location = '../Home/Importar_DIRF' //nunca usar
+window.location = '../Home/Caminho_Controller' //nunca usar
 
 window.location = window.location.pathname //usar
 
