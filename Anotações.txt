@@ -7,7 +7,7 @@ window.location = window.location.pathname //usar
        
         $(function () {
 	var pathname = window.location.pathname;
-	var uri = pathname.replace("/Home/Importar_DIRF/", "");
+	var uri = pathname.replace("/Home/Caminho_Controler/", "");
             $("#btnConfirmar").click(function () {
                 $.ajax(
                     {
