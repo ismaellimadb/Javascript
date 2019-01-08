@@ -1,3 +1,36 @@
 window.location = '../Home/Importar_DIRF' //nunca usar
 
 window.location = window.location.pathname //usar
+
+
+<script>
+       
+        $(function () {
+	var pathname = window.location.pathname;
+	var uri = pathname.replace("/Home/Importar_DIRF/", "");
+            $("#btnConfirmar").click(function () {
+                $.ajax(
+                    {
+                        type: "POST",
+                        url: uri,
+                        data: {
+                            login: $("#login").val(),
+                            senha: $("#senha").val(),
+                        },
+
+
+                        success: function (json) {
+                            if (json.isRedirect) {
+                                window.location.href = json.redirectUrl;
+                            }
+                            else {
+                                document.getElementById("erro").innerHTML = json;
+                                window.location.reload();
+                            }
+                        }
+                    }
+                );
+            })
+
+        })
+    </script>
