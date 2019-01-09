@@ -4,7 +4,6 @@ window.location = window.location.pathname //usar
 
 //Pegando parte especifica de uma url, jogando dentro de uma variavel e usando Ajax para enviar para controller
 <script>
-       
         $(function () {
 	var pathname = window.location.pathname;
 	var uri = pathname.replace("/Home/Caminho_Controller/", "");
@@ -35,7 +34,7 @@ window.location = window.location.pathname //usar
         })
     </script>
 
-//Tirar primeira e ultima barra de uma url
+//Tirar primeira e ultima barra de uma url e utilizar o valor inserido numa variavel dentro de uma pagina html
 $(document).ready(function () {
             var pathname = window.location.pathname;
             var x = pathname.indexOf('/');
@@ -67,8 +66,7 @@ $(document).ready(function () {
             }
         }
 
+//Função Simples de redirecionamento para ser usado em conjunto com onclick no html
         function Sair() {
             window.location = '../Index';
         }
-
-
