@@ -43,3 +43,30 @@ $(document).ready(function () {
             document.getElementById("user").innerHTML = u;
         });
 
+//Utilizando CSS dinamico de acordo com a contagem do número de caracteres
+ function centro() {
+            var ddl = document.getElementById("ddl");
+            var csss = $("#ddl option:selected").text();
+            var n = csss.length;
+
+            if (n < 1 || n <= 41) {
+                ddl.style.textIndent = "270px";
+            }
+
+            else if (n == 42 || n < 71) {
+                ddl.style.textIndent = "110px";
+            }
+
+            else if (n == 71 || n <= 75) {
+                ddl.style.textIndent = "70px";
+            }
+
+            else {
+                ddl.style.textIndent = "10px";
+            }
+        }
+
+        function Sair() {
+            window.location = '../Index';
+        }
+
