@@ -34,7 +34,7 @@ window.location = window.location.pathname //usar
         })
     </script>
 
-//Tirar primeira e ultima barra de uma url
+//Tirar primeira e ultima barra de uma url e utilizar o valor inserido numa variavel dentro de uma pagina html
 $(document).ready(function () {
             var pathname = window.location.pathname;
             var x = pathname.indexOf('/');
