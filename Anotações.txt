@@ -2,7 +2,7 @@ window.location = '../Home/Caminho_Controller' //nunca usar
 
 window.location = window.location.pathname //usar
 
-
+//Pegando parte especifica de uma url, jogando dentro de uma variavel e usando Ajax para enviar para controller
 <script>
        
         $(function () {
