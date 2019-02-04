@@ -43,7 +43,7 @@ $(document).ready(function () {
             document.getElementById("user").innerHTML = u;
         });
 
-//Utilizando CSS dinamico de acordo com a contagem do número de caracteres
+//Utilizando CSS dinamico de acordo com a contagem do nÃºmero de caracteres
  function centro() {
             var ddl = document.getElementById("ddl");
             var csss = $("#ddl option:selected").text();
@@ -66,8 +66,49 @@ $(document).ready(function () {
             }
         }
 
-//Função Simples de redirecionamento para ser usado em conjunto com onclick no html
+//FunÃ§Ã£o Simples de redirecionamento para ser usado em conjunto com onclick no html
         function Sair() {
             window.location = '../Index';
         }
 
+
+
+//Barrando letras: e, E alem de caracteres: .,-+
+$(function () {
+            $('#Telefone').
+                on('focus', function () {
+                    $('#Telefone').on('keypress', function (e) {
+                    if (e.which == 69) {
+                        return false;
+                        }
+
+                        if (e.which == 101) {
+                            return false;
+                        }
+
+                        if (e.which == 43 || e.which == 44 || e.which == 45 || e.which == 46) {
+                            return false;
+                        }
+                }) }).
+                on('blur', function () {
+                    $('#Telefone').on('keypress', function (e) {
+                        if (e.which == 69) {
+                            return false;
+                        }
+
+                        if (e.which == 101) {
+                            return false;
+                        }
+
+                        if (e.which == 43 || e.which == 44 || e.which == 45 || e.which == 46) {
+                            return false;
+                        }
+                    }) });
+        });
+	
+//Tirando 'roleta numerica' do html5 com css
+input[type=number]::-webkit-inner-spin-button,
+    input[type=number]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
