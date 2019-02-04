@@ -112,3 +112,19 @@ input[type=number]::-webkit-inner-spin-button,
         -webkit-appearance: none;
         margin: 0;
     }
+
+//Limitando maximo de caracteres com jQuery
+
+var max_chars = 9;
+
+        $('#Telefone').keydown(function (e) {
+            if ($(this).val().length >= max_chars) {
+                $(this).val($(this).val().substr(0, max_chars));
+            }
+        });
+
+        $('#Telefone').keyup(function (e) {
+            if ($(this).val().length >= max_chars) {
+                $(this).val($(this).val().substr(0, max_chars));
+            }
+        });
